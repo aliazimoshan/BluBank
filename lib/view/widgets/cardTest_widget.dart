@@ -1,5 +1,4 @@
 import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/view/screens/roya/royaScreen.dart';
 import 'package:flutter/material.dart';
 
 class CardTestWidget extends StatelessWidget {
