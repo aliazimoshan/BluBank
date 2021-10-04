@@ -1,3 +1,4 @@
+import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 
 class LhamScreen extends StatelessWidget {
