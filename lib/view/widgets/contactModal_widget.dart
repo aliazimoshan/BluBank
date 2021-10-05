@@ -27,74 +27,90 @@ class Contactmodalwidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      color: Colors.black.withOpacity(0.5),
-      padding: EdgeInsets.all(25),
-      child: Column(
-        children: [
-          Spacer(),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: Colors.white,
-            ),
-            child: Column(
-              children: [
-                SizedBox(height: 25),
-                Center(
-                  child: Text(
-                    "بلولاین",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+    return InkWell(
+      onTap: () {
+        showModalBottomSheet(
+          backgroundColor: Colors.transparent,
+          isScrollControlled: true,
+          context: context,
+          builder: (context) {
+            return Container(
+              width: MediaQuery.of(context).size.width,
+              color: Colors.black.withOpacity(0.5),
+              padding: EdgeInsets.all(25),
+              child: Column(
+                children: [
+                  Spacer(),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 25),
+                        Center(
+                          child: Text(
+                            "بلولاین",
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            "همیشه به وقت همه جا",
+                            style: TextStyle(fontSize: 20, color: Colors.grey),
+                          ),
+                        ),
+                        Divider(),
+                        blulist(
+                          title: "گفتگو",
+                          greyicon: Icons.question_answer_outlined,
+                        ),
+                        Divider(),
+                        blulist(
+                          title: "تماس",
+                          greyicon: Icons.call_outlined,
+                        ),
+                        Divider(),
+                        blulist(
+                          title: "سوالات متداول",
+                          greyicon: Icons.quiz_outlined,
+                        ),
+                        SizedBox(height: 25),
+                      ],
                     ),
                   ),
-                ),
-                Center(
-                  child: Text(
-                    "همیشه به وقت همه جا",
-                    style: TextStyle(fontSize: 20, color: Colors.grey),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 75,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.white,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "انصراف",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: BluColor.primaryColor),
+                      ),
+                    ),
                   ),
-                ),
-                Divider(),
-                blulist(
-                  title: "گفتگو",
-                  greyicon: Icons.question_answer_outlined,
-                ),
-                Divider(),
-                blulist(
-                  title: "تماس",
-                  greyicon: Icons.call_outlined,
-                ),
-                Divider(),
-                blulist(
-                  title: "سوالات متداول",
-                  greyicon: Icons.quiz_outlined,
-                ),
-                SizedBox(height: 25),
-              ],
-            ),
-          ),
-          SizedBox(height: 20),
-          Container(
-            height: 75,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: Colors.white,
-            ),
-            child: Center(
-              child: Text(
-                "انصراف",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: BluColor.primaryColor),
+                  Spacer(),
+                ],
               ),
-            ),
-          ),
-          Spacer(),
-        ],
+            );
+          },
+        );
+      },
+      child: Container(
+        color: BluColor.primaryColor,
+        width: 50,
+        height: 50,
       ),
     );
   }
