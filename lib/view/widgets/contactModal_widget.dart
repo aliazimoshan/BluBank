@@ -35,7 +35,7 @@ class Contactmodalwidget extends StatelessWidget {
           context: context,
           builder: (context) {
             return Container(
-              width: MediaQuery.of(context).size.width,
+              width: BluDimensions.width(context),
               color: Colors.black.withOpacity(0.5),
               padding: EdgeInsets.all(25),
               child: Column(

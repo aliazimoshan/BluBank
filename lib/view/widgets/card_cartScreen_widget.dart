@@ -2,13 +2,15 @@ import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
-class Cartprofilescreenwidget extends StatelessWidget {
+class Cardcartscreenwidget extends StatelessWidget {
   final IconData whiteicon;
   final String title;
+  final String text;
 
-  const Cartprofilescreenwidget({
+  const Cardcartscreenwidget({
     required this.whiteicon,
     required this.title,
+    required this.text,
   });
 
   @override
@@ -28,11 +30,23 @@ class Cartprofilescreenwidget extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Container(
-            child: Text(
-              title,
-              style: TextStyle(fontSize: 18),
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                child: Text(
+                  title,
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.right,
+                ),
+              ),
+              Container(
+                child: Text(
+                  text,
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+            ],
           ),
           SizedBox(width: 20),
           Container(
