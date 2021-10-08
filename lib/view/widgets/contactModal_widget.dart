@@ -14,7 +14,7 @@ class Contactmodalwidget extends StatelessWidget {
           Spacer(),
           Text(
             title,
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 16),
           ),
           SizedBox(width: 20),
           Container(
@@ -31,12 +31,10 @@ class Contactmodalwidget extends StatelessWidget {
       onTap: () {
         showModalBottomSheet(
           backgroundColor: Colors.transparent,
-          isScrollControlled: true,
           context: context,
           builder: (context) {
             return Container(
               width: BluDimensions.width(context),
-              color: Colors.black.withOpacity(0.5),
               padding: EdgeInsets.all(25),
               child: Column(
                 children: [
@@ -48,12 +46,12 @@ class Contactmodalwidget extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 25),
+                        SizedBox(height: 22),
                         Center(
                           child: Text(
                             "بلولاین",
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -84,23 +82,26 @@ class Contactmodalwidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Container(
-                    height: 75,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: Colors.white,
-                    ),
-                    child: Center(
-                      child: Text(
-                        "انصراف",
-                        style: TextStyle(
+                  InkWell(
+                    onTap: () => Navigator.pop(context),
+                    child: Container(
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.white,
+                      ),
+                      child: Center(
+                        child: Text(
+                          "انصراف",
+                          style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: BluColor.primaryColor),
+                            color: BluColor.primaryColor,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  Spacer(),
                 ],
               ),
             );

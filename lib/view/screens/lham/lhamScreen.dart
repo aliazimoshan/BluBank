@@ -12,6 +12,9 @@ class LhamScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Lham"),
       ),
+      body: Column(
+        children: [Contactmodalwidget()],
+      ),
     );
   }
 }
