@@ -48,6 +48,15 @@ flutter:
     - assets/img/Home.png
     - assets/img/Swap.png
     - assets/img/Time-Circle.png
+    - assets/img/bankimg1.png
+    - assets/img/bankimg2.png
+    - assets/img/bankimg3.png
+    - assets/img/bankimg4.png
+
+
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

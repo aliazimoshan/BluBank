@@ -8,22 +8,20 @@ import 'package:flutter/material.dart';
 class buttomwidget extends StatelessWidget {
   final String title;
   final Widget? route;
-  final Color? textColor;
+  final Color? color;
   final Color? backgroundColor;
-  final Opacity? opacity;
   final IconData  icons; 
-  final Color? iconcolor;
+  
  
   
 
   const buttomwidget({
     required this.title,
     this.route,
-    this.textColor,
+    this.color,
     this.backgroundColor,
-    this.opacity,
     required this.icons,
-    this.iconcolor,
+    
    
 
   });
@@ -59,7 +57,7 @@ class buttomwidget extends StatelessWidget {
              Text(
             title,
             style: TextStyle(
-              color: textColor ?? Colors.white,
+              color: color ?? Colors.white,
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
@@ -67,7 +65,7 @@ class buttomwidget extends StatelessWidget {
           Icon(
             icons,
             size: 30,
-            color:textColor,
+            color:color,
            ),
           
 
