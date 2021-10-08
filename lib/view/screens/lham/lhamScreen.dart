@@ -1,3 +1,6 @@
+import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
+import 'package:blubank/view/widgets/contactModal_widget.dart';
+import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 
 class LhamScreen extends StatelessWidget {
@@ -8,6 +11,9 @@ class LhamScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Lham"),
+      ),
+      body: Column(
+        children: [Contactmodalwidget()],
       ),
     );
   }
