@@ -4,17 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class Card_addTransactionScreen_widget extends StatelessWidget {
+class CardaddTransactionScreenwidget extends StatelessWidget {
   final String name;
   final Widget? route;
-  final String cardnum;
-  final Image? bankimage;
-
-  const Card_addTransactionScreen_widget({
+  final String cardNum;
+  final Image? bankImage;
+  const CardaddTransactionScreenwidget({
     required this.name,
     this.route,
-   required this.cardnum,
-   this.bankimage,
+   required this.cardNum,
+   this.bankImage,
     
   });
 @override
@@ -43,16 +42,16 @@ class Card_addTransactionScreen_widget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Text(name,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 22),),
+              Text(name,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
               SizedBox(height: 3,),
-              Text(cardnum,style: TextStyle(color: Colors.grey,fontSize: 18),),
+              Text(cardNum,style: TextStyle(color: Colors.grey,fontSize: 17),),
             ],),
             SizedBox(width: 15,),
              Stack(
               children: [
                 Container(
-                  width: 60,
-                  margin: EdgeInsets.only(left: 15),
+                  width: 55,
+                  margin: EdgeInsets.only(left: 5),
                   alignment:Alignment.bottomRight,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
@@ -60,16 +59,15 @@ class Card_addTransactionScreen_widget extends StatelessWidget {
                   ),
                   child: Center(child: Icon(Icons.person_outline,size: 30,color: Colors.grey[500],),),
                 ),
-                Spacer(),
                 Container(
-                  padding: EdgeInsets.only(right: 9,bottom: 9),
+                  height: 32,
+                  padding: EdgeInsets.only(right: 8,bottom: 8),
                   margin: EdgeInsets.only(top: 55,),
-                  width: 45,
                   decoration: BoxDecoration(
                     color: Colors.grey[100],
                     shape: BoxShape.circle,                    
                   ),
-                  child: (bankimage),
+                  child: (bankImage),
                   
                 ),
               ],

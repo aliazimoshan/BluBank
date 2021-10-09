@@ -5,22 +5,24 @@ import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class buttomwidget extends StatelessWidget {
+class buttomWidget extends StatelessWidget {
   final String title;
   final Widget? route;
   final Color? color;
   final Color? backgroundColor;
   final IconData  icons; 
+  final double?sizebox;
   
  
   
 
-  const buttomwidget({
+  const buttomWidget({
     required this.title,
     this.route,
     this.color,
     this.backgroundColor,
     required this.icons,
+    this.sizebox,
     
    
 
@@ -42,33 +44,33 @@ class buttomwidget extends StatelessWidget {
         }
       },
       child: Container(
-        margin: EdgeInsets.all(20),
+        margin: EdgeInsets.all(10),
         
         width: BluDimensions.width(context),
-        height: 100,
+        height: 70,
         decoration: BoxDecoration(
           
           color: backgroundColor ?? BluColor.primaryColor,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(30),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
              Text(
             title,
             style: TextStyle(
               color: color ?? Colors.white,
-              fontSize: 25,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
-          ), SizedBox(width: 8,),
+          ),
+          SizedBox(width: sizebox),
           Icon(
             icons,
-            size: 30,
             color:color,
+            size: 30,
            ),
-          
-
           ],
         )
       ),
