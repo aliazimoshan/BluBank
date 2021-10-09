@@ -8,15 +8,14 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
   final String name;
   final Widget? route;
   final String cardNum;
-  final Image? bankImage;
+  final String bankImage;
   const CardaddTransactionScreenwidget({
     required this.name,
     this.route,
-   required this.cardNum,
-   this.bankImage,
-    
+    required this.cardNum,
+    required this.bankImage,
   });
-@override
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
@@ -35,45 +34,63 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
         margin: EdgeInsets.all(10),
         width: BluDimensions.width(context),
         height: 100,
-        child:Row(
+        child: Row(
           children: [
             Spacer(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Text(name,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
-              SizedBox(height: 3,),
-              Text(cardNum,style: TextStyle(color: Colors.grey,fontSize: 17),),
-            ],),
-            SizedBox(width: 15,),
-             Stack(
+                Text(
+                  name,
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
+                ),
+                SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  cardNum,
+                  style: TextStyle(color: Colors.grey, fontSize: 17),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: 15,
+            ),
+            Stack(
               children: [
                 Container(
                   width: 55,
                   margin: EdgeInsets.only(left: 5),
-                  alignment:Alignment.bottomRight,
+                  alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                     shape: BoxShape.circle,
                   ),
-                  child: Center(child: Icon(Icons.person_outline,size: 30,color: Colors.grey[500],),),
+                  child: Center(
+                    child: Icon(
+                      Icons.person_outline,
+                      size: 30,
+                      color: Colors.grey[500],
+                    ),
+                  ),
                 ),
                 Container(
                   height: 32,
-                  padding: EdgeInsets.only(right: 8,bottom: 8),
-                  margin: EdgeInsets.only(top: 55,),
+                  padding: EdgeInsets.only(right: 8, bottom: 8),
+                  margin: EdgeInsets.only(
+                    top: 55,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.grey[100],
-                    shape: BoxShape.circle,                    
+                    shape: BoxShape.circle,
                   ),
-                  child: (bankImage),
-                  
+                  child: Image.asset(bankImage),
                 ),
               ],
             ),
           ],
-        ) 
+        ),
       ),
     );
   }

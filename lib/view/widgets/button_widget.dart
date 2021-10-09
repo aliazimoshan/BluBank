@@ -10,11 +10,7 @@ class buttomWidget extends StatelessWidget {
   final Widget? route;
   final Color? color;
   final Color? backgroundColor;
-  final IconData  icons; 
-  final double?sizebox;
-  
- 
-  
+  final IconData icons;
 
   const buttomWidget({
     required this.title,
@@ -22,10 +18,6 @@ class buttomWidget extends StatelessWidget {
     this.color,
     this.backgroundColor,
     required this.icons,
-    this.sizebox,
-    
-   
-
   });
 
   @override
@@ -43,40 +35,37 @@ class buttomWidget extends StatelessWidget {
           print("No route to go");
         }
       },
-      child: Container(
-        margin: EdgeInsets.all(10),
-        
-        width: BluDimensions.width(context),
-        height: 70,
-        decoration: BoxDecoration(
-          
-          color: backgroundColor ?? BluColor.primaryColor,
-          borderRadius: BorderRadius.circular(30),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-             Text(
-            title,
-            style: TextStyle(
-              color: color ?? Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Container(
+          margin: EdgeInsets.all(10),
+          width: BluDimensions.width(context),
+          height: 70,
+          decoration: BoxDecoration(
+            color: backgroundColor ?? BluColor.primaryColor,
+            borderRadius: BorderRadius.circular(30),
           ),
-          SizedBox(width: sizebox),
-          Icon(
-            icons,
-            color:color,
-            size: 30,
-           ),
-          ],
-        )
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                icons,
+                color: color,
+                size: 25,
+              ),
+              SizedBox(width: 10),
+              Text(
+                title,
+                style: TextStyle(
+                  color: color ?? Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
-      
-  
-  
