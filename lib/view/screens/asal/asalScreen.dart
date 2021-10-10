@@ -1,7 +1,10 @@
+
+import 'package:blubank/view/widgets/textInput_widget';
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/view/widgets/button_widget.dart';
 import 'package:blubank/view/widgets/card_addTransactionScreen_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class AsalScreen extends StatelessWidget {
   const AsalScreen({Key? key}) : super(key: key);
@@ -14,6 +17,7 @@ class AsalScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
+         
           buttomWidget(
             title: "افزایش موجودی",
             color: Colors.white,
@@ -38,8 +42,12 @@ class AsalScreen extends StatelessWidget {
           CardaddTransactionScreenwidget(name: "کریم اسد الهی", cardNum: "6362  ****  ****  5173",bankImage: Image.asset('assets/img/bankimg2.png')),
           CardaddTransactionScreenwidget(name: "بهرام صادقی", cardNum: "6104  ****  ****  7569",bankImage: Image.asset('assets/img/bankimg3.png')),
           CardaddTransactionScreenwidget(name: "والا اطمینان باصری", cardNum: "6274  ****  ****  2517",bankImage: Image.asset('assets/img/bankimg4.png')),
+          TextInputWidget(),
+          SizedBox(height: 10,)
         ],
+        
       ),
+      
     );
   }
 }

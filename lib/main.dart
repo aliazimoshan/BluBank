@@ -1,6 +1,5 @@
 import 'package:blubank/view/screens/mainScreen.dart';
 import 'package:flutter/material.dart';
-
 import 'constant/colors.dart';
 
 void main() {
