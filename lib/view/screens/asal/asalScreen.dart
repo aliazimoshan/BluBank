@@ -1,5 +1,5 @@
 import 'package:blubank/constant/colors.dart';
-import 'package:blubank/view/widgets/textInput_widget';
+import 'package:blubank/view/widgets/textInput_widget.dart';
 import 'package:blubank/view/widgets/button_widget.dart';
 import 'package:blubank/view/widgets/card_addTransactionScreen_widget.dart';
 import 'package:flutter/material.dart';
