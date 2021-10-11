@@ -1,3 +1,4 @@
+import 'package:blubank/view/widgets/appBar_widget.dart';
 import 'package:flutter/material.dart';
 
 class RoyaScreen extends StatelessWidget {
@@ -6,8 +7,8 @@ class RoyaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Roya"),
+      appBar: AppBarWidget(
+        text: "علی عظیم الشان",
       ),
     );
   }
