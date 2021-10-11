@@ -23,7 +23,7 @@ const TextInputWidget(
                   ),
             
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+              borderRadius: BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(color: Colors.blue),
             ),
             ),
