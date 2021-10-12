@@ -13,6 +13,7 @@ class BluBank extends StatelessWidget {
     return MaterialApp(
       title: 'BluBank',
       theme: ThemeData(
+        fontFamily: "Vazir",
         primaryColor: BluColor.primaryColor,
       ),
       home: MainScreen(),
