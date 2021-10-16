@@ -114,6 +114,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   //--------------- notification ---------------\\
                   header(context, title: "اطلاع رسانی"),
+
                   SizedBox(height: 20),
                   Cartprofilescreenwidget(
                       whiteicon: Icons.notifications_rounded,
@@ -123,6 +124,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   //--------------- public ---------------\\
                   header(context, title: "عمومی"),
                   SizedBox(height: 20),
+                  Cartprofilescreenwidget(
+                      whiteicon: Icons.people_rounded, title: "دعوت از دوستان"),
+                  SizedBox(height: 10),
+                  Cartprofilescreenwidget(
+                      whiteicon: Icons.description_rounded,
+                      title: "قوانین و شرایط"),
+                  SizedBox(height: 10),
+                  Cartprofilescreenwidget(
+                      whiteicon: Icons.insert_emoticon_rounded,
+                      title: "درباره ما"),
+                  SizedBox(height: 10),
+                  Cartprofilescreenwidget(
+                      whiteicon: Icons.exit_to_app_rounded,
+                      title: "خروج از حساب کاربری")
                 ],
               ),
             ],
