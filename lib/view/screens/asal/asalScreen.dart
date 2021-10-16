@@ -1,10 +1,9 @@
 import 'package:blubank/constant/colors.dart';
-import 'package:blubank/main.dart';
 import 'package:blubank/view/screens/asal/addTransactionScreen1.dart';
 import 'package:blubank/view/widgets/textInput_widget.dart';
 import 'package:blubank/view/widgets/button_widget.dart';
 import 'package:blubank/view/widgets/card_addTransactionScreen_widget.dart';
-import 'package:blubank/view/screens/mainScreen.dart';
+import 'package:blubank/view/screens/asal/transactionListScreen.dart';
 import 'package:blubank/view/widgets/cardTest_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +57,12 @@ class AsalScreen extends StatelessWidget {
             bankImage: 'assets/img/bankimg4.png',
           ),
           TextInputWidget(),
-          CardTestWidget(title: "addTransactionScreen", route: AddTransactionScreen(),)
+          CardTestWidget(
+              title: "AddTransactionScreen", route: AddTransactionScreen()),
+          CardTestWidget(
+            title: "TransactionListScreen",
+            route: TransactionListScreen(),
+          )
         ],
       ),
     );
