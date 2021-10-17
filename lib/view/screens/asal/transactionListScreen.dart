@@ -33,13 +33,13 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
         cornerRadius: 16,
         snapSpec: const SnapSpec(
           snap: true,
-          snappings: [1.2, 0.65],
+          snappings: [1.0, 0.65],
           positioning: SnapPositioning.relativeToAvailableSpace,
         ),
         body: Column(
           children: [
             Container(
-              height: BluDimensions.height(context),
+              height: BluDimensions.height(context)-112,
               width: BluDimensions.width(context),
               decoration: BoxDecoration(
                 color: Colors.lightBlue[400],
@@ -81,7 +81,7 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
         ),
         builder: (context, state) {
           return Container(
-              height: BluDimensions.height(context),
+              height: BluDimensions.height(context)-100,
               child: Padding(
                 padding: EdgeInsets.all(10),
                 child: Column(
@@ -101,7 +101,7 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
                       height: 10,
                     ),
                     Container(
-                      height: BluDimensions.height(context)-200,
+                      height: BluDimensions.height(context)-212,
                       width: BluDimensions.width(context),
                       child: ListView(
                         children: [],

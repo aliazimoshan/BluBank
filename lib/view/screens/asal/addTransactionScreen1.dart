@@ -85,7 +85,7 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
         ),
         builder: (context, state) {
           return Container(
-              height: BluDimensions.height(context) - 100,
+              height: BluDimensions.height(context)-100,
               child: Padding(
                 padding: EdgeInsets.all(15),
                 child: Column(
@@ -106,7 +106,7 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height - 250,
+                      height: MediaQuery.of(context).size.height - 260,
                       child: ListView(
                         children: [
                           CardaddTransactionScreenwidget(
@@ -153,7 +153,7 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 3,
+                      height: 6,
                     ),
                     FloationActionAdd(),
                     SizedBox(
