@@ -15,19 +15,21 @@ class Cartprofilescreenwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: BluDimensions.width(context),
-      height: 50,
+      height: 48,
       child: Row(
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
+              borderRadius: BorderRadius.circular(48),
               color: BluColor.primaryColor,
             ),
-            width: 50,
+            height: 48,
+            width: 48,
             child: Center(
               child: Icon(
                 whiteicon,
                 color: Colors.white,
+                size: 24,
               ),
             ),
           ),
@@ -44,6 +46,7 @@ class Cartprofilescreenwidget extends StatelessWidget {
               child: Icon(
                 Icons.arrow_forward_ios_outlined,
                 color: Colors.grey,
+                size: 20,
               ),
             ),
           ),
