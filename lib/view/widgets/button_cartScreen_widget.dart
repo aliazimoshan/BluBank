@@ -26,16 +26,16 @@ class Buttoncartscreenwidget extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: 40,
+                  width: 40,
                   child: Image.asset(
                     imgpath,
-                    width: 40,
-                    height: 40,
+                    width: 20,
+                    height: 20,
                   ),
                 ),
+                SizedBox(height: 5),
                 Container(
-                  height: 30,
                   child: Center(
                     child: Text(title,
                         style: TextStyle(

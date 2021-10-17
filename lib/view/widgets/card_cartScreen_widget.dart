@@ -6,11 +6,13 @@ class Cardcartscreenwidget extends StatelessWidget {
   final IconData whiteicon;
   final String title;
   final String text;
+  final Color? circlecolor;
 
   const Cardcartscreenwidget({
     required this.whiteicon,
     required this.title,
     required this.text,
+    this.circlecolor,
   });
 
   @override
@@ -21,17 +23,21 @@ class Cardcartscreenwidget extends StatelessWidget {
       child: Row(
         children: [
           Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: circlecolor ?? BluColor.primaryColor,
+            ),
             width: 50,
             child: Center(
               child: Icon(
-                Icons.arrow_back_ios_rounded,
-                color: Colors.grey,
+                whiteicon,
+                color: Colors.white,
               ),
             ),
           ),
-          Spacer(),
+          SizedBox(width: 20),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 child: Text(
@@ -48,17 +54,13 @@ class Cardcartscreenwidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(width: 20),
+          Spacer(),
           Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              color: BluColor.primaryColor,
-            ),
-            width: 50,
             child: Center(
               child: Icon(
-                whiteicon,
-                color: Colors.white,
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.grey,
+                size: 20,
               ),
             ),
           ),
