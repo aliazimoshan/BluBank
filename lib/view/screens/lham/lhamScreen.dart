@@ -1,10 +1,13 @@
 import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/view/screens/lham/cartScreen.dart';
-import 'package:blubank/view/screens/lham/profileScreen.dart';
+// import 'package:blubank/view/screens/lham/cartScreen.dart';
+// import 'package:blubank/view/screens/lham/profileScreen.dart';
 import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
 import 'package:blubank/view/widgets/contactModal_widget.dart';
 import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../cartScreen.dart';
+import '../profileScreen.dart';
 
 class LhamScreen extends StatelessWidget {
   const LhamScreen({Key? key}) : super(key: key);
