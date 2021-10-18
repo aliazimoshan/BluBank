@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
 import 'package:blubank/view/widgets/appBar_widget.dart';
-import 'package:blubank/view/widgets/cardSwitchScreen.dart';
+import 'package:blubank/view/widgets/cardSwitch_widget.dart';
 import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
 import 'package:blubank/view/widgets/card_profileScreen_widget.dart';
 import 'package:blubank/view/widgets/contactModal_widget.dart';
