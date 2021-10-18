@@ -1,4 +1,5 @@
 import 'package:blubank/view/screens/mainScreen.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
 import 'constant/colors.dart';
 
@@ -14,6 +15,15 @@ class BluBank extends StatelessWidget {
       theme: ThemeData(
         primaryColor: BluColor.primaryColor,
       ),
+      localizationsDelegates: [
+        GlobalCupertinoLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("fa", "IR"),
+      ],
+      locale: Locale("fa", "IR"),
       home: MainScreen(),
     );
   }

@@ -2,10 +2,9 @@ import 'dart:ui';
 
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
+import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
-
-import 'view/widgets/rectangleCard_homeScreen_widget.dart';
 
 class BluHomeScreen extends StatefulWidget {
   @override

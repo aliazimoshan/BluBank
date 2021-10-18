@@ -1,5 +1,6 @@
 import 'package:blubank/view/screens/HomeScreen.dart';
-import 'package:blubank/view/widgets/cardSwitchScreen.dart';
+import 'package:blubank/view/widgets/appBar_widget.dart';
+import 'package:blubank/view/widgets/cardSwitch_widget.dart';
 import 'package:flutter/material.dart';
 
 // import 'HomeScreen.dart';
@@ -13,8 +14,8 @@ class _RoyaScreenState extends State<RoyaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Roya"),
+      appBar: AppBarWidget(
+        text: "علی عظیم الشان",
       ),
       body: Column(
         children: [
