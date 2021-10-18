@@ -15,36 +15,38 @@ class Cartprofilescreenwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: BluDimensions.width(context),
-      height: 50,
+      height: 48,
       child: Row(
         children: [
           Container(
-            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(48),
+              color: BluColor.primaryColor,
+            ),
+            height: 48,
+            width: 48,
             child: Center(
               child: Icon(
-                Icons.arrow_back_ios_rounded,
-                color: Colors.grey,
+                whiteicon,
+                color: Colors.white,
+                size: 24,
               ),
             ),
           ),
-          Spacer(),
+          SizedBox(width: 20),
           Container(
             child: Text(
               title,
               style: TextStyle(fontSize: 18),
             ),
           ),
-          SizedBox(width: 20),
+          Spacer(),
           Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              color: BluColor.primaryColor,
-            ),
-            width: 50,
             child: Center(
               child: Icon(
-                whiteicon,
-                color: Colors.white,
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.grey,
+                size: 20,
               ),
             ),
           ),

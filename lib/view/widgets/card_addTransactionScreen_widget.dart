@@ -36,28 +36,7 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
         height: 100,
         child: Row(
           children: [
-            Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  name,
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
-                ),
-                SizedBox(
-                  height: 3,
-                ),
-                Text(
-                  cardNum,
-                  style: TextStyle(color: Colors.grey, fontSize: 17),
-                ),
-              ],
-            ),
-            SizedBox(
-              width: 15,
-            ),
-            Stack(
+             Stack(
               children: [
                 Container(
                   width: 55,
@@ -77,9 +56,10 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
                 ),
                 Container(
                   height: 32,
-                  padding: EdgeInsets.only(right: 8, bottom: 8),
+                  padding: EdgeInsets.only(right: 6, bottom: 6),
                   margin: EdgeInsets.only(
-                    top: 55,
+                    top: 50,
+                    right: 30,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.grey[100],
@@ -89,6 +69,28 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
                 ),
               ],
             ),
+             SizedBox(
+              width: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  name,
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
+                ),
+                SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  cardNum,
+                  style: TextStyle(color: Colors.grey, fontSize: 17),
+                ),
+              ],
+            ),
+           
+           
           ],
         ),
       ),
