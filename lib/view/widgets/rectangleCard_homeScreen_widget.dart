@@ -18,8 +18,7 @@ class Rectanglecardhomescreenwidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 75,
-          height: 75,
+          padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: cardcolor,
