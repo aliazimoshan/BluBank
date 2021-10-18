@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
 import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
@@ -21,11 +19,37 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
             width: BluDimensions.width(context),
             height: BluDimensions.height(context),
             color: BluColor.primaryColor,
-            child: Text('fghjkl;'),
+            child: Container(
+              height: BluDimensions.height(context) / 4,
+              padding: EdgeInsets.all(8),
+              margin: EdgeInsets.only(top: 30),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.qr_code_rounded,
+                    size: 65,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'پرداخت سریع',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Icon(
+                    Icons.keyboard_arrow_down_rounded,
+                    size: 30,
+                    color: Colors.white.withOpacity(0.8),
+                  ),
+                ],
+              ),
+            ),
           ),
           SlidingSheet(
             elevation: 5,
             cornerRadius: 15,
+            // scrollSpec: const ScrollSpec(overscroll: false),
             snapSpec: const SnapSpec(
               snap: true,
               snappings: [0.2, 0.7, 0.9],
@@ -36,12 +60,20 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
               return Container(
                 height: BluDimensions.height(context),
                 child: Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(20),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(10),
+                        width: 40,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 20),
                         padding: EdgeInsets.only(right: 20),
                         width: BluDimensions.width(context),
                         height: 70,
@@ -79,15 +111,27 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
                             Icon(
                               Icons.mobile_friendly,
                               color: Colors.white,
-                              size: 35,
+                              size: 55,
                             ),
                           ],
                         ),
                       ),
-                      Text('خدمات روزمره'),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'خدمات پرداخت',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
                       GridView.count(
                         physics: NeverScrollableScrollPhysics(),
-                        childAspectRatio: 0.7,
+                        childAspectRatio: 0.6,
                         crossAxisCount: 4,
                         // padding: EdgeInsets.all(10),
                         shrinkWrap: true,
@@ -110,9 +154,6 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
                           ),
                         ],
                       ),
-                      // SizedBox(
-                      //   height: 20,
-                      // ),
                     ],
                   ),
                 ),
