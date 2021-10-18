@@ -3,6 +3,8 @@ import 'package:blubank/view/widgets/appBar_widget.dart';
 import 'package:blubank/view/widgets/cardSwitch_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../login.dart';
+
 // import 'HomeScreen.dart';
 
 class RoyaScreen extends StatefulWidget {
@@ -37,6 +39,19 @@ class _RoyaScreenState extends State<RoyaScreen> {
             greyicon: Icons.checklist_rounded,
             subtitle: 'بهترین خدمات ممکن',
             iconColor: Colors.white,
+          ),
+          Container(
+            child: ElevatedButton(
+              child: Text('BluLogin Screen'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BluLogin(),
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
