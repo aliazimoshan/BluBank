@@ -10,50 +10,54 @@ class BluLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
+          child: ListView(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 60, bottom: 60),
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: 30, bottom: 70),
                 child: Image.asset(
                   'assets/img/bluLogo.png',
                   width: BluDimensions.width(context) / 4,
                 ),
               ),
-              Text(
-                'Users name',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+              Center(
+                child: Text(
+                  'Users name',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top: 20,
+                  top: 15,
                 ),
                 child: TextInputWidget(),
               ),
               buttomWidget(
-                icons: Icons.face_outlined,
+                color: Colors.white,
+                icons: Icons.face_unlock_outlined,
                 title: 'ورود با تشخیص چهره',
               ),
-              Spacer(),
+              SizedBox(
+                height: BluDimensions.height(context) * 0.2,
+              ),
               InkWell(
-                child: Text(
-                  'خروج از حساب کاربری',
-                  style: TextStyle(
-                    color: BluColor.primaryColor,
-                    fontWeight: FontWeight.bold,
+                child: Center(
+                  child: Text(
+                    'خروج از حساب کاربری',
+                    style: TextStyle(
+                        color: BluColor.primaryColor,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
                 onTap: () {
                   // Navigator.push(context, );
                 },
               ),
-              SizedBox(
-                height: 30,
-              )
             ],
           ),
         ),
@@ -61,3 +65,47 @@ class BluLogin extends StatelessWidget {
     );
   }
 }
+
+// Column(
+            
+//             children: [
+//               Container(
+//                 margin: EdgeInsets.only(top: 60, bottom: 60),
+//                 child: Image.asset(
+//                   'assets/img/bluLogo.png',
+//                   width: BluDimensions.width(context) / 4,
+//                 ),
+//               ),
+//               Text(
+//                 'Users name',
+//                 style: TextStyle(
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//               Padding(
+//                 padding: const EdgeInsets.only(
+//                   top: 15,
+//                 ),
+//                 child: TextInputWidget(),
+//               ),
+//               buttomWidget(
+//                 icons: Icons.face_outlined,
+//                 title: 'ورود با تشخیص چهره',
+//               ),
+//               Spacer(),
+//               InkWell(
+//                 child: Text(
+//                   'خروج از حساب کاربری',
+//                   style: TextStyle(
+//                       color: BluColor.primaryColor,
+//                       fontWeight: FontWeight.w500),
+//                 ),
+//                 onTap: () {
+//                   // Navigator.push(context, );
+//                 },
+//               ),
+//               SizedBox(
+//                 height: 30,
+//               )
+//             ],
+//           ),
