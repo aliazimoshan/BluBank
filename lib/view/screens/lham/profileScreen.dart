@@ -89,11 +89,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBarWidget(text: "تنظیمات"),
       body: Container(
-        padding: EdgeInsets.fromLTRB(25, 25, 25, 0),
+        padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
         color: Colors.white,
         width: BluDimensions.width(context),
         height: BluDimensions.height(context),
         child: ListView(
+          padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
           children: [
             Column(
               children: [

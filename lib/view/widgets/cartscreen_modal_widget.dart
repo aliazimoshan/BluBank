@@ -47,12 +47,14 @@ class Cartscreenmodalwidget extends StatelessWidget {
                 Row(
                   children: [
                     Buttoncartscreenwidget(
-                        title: "اشتراک گذاری",
-                        imgpath: "assets/img/Upload.png"),
+                      title: "اشتراک گذاری",
+                      iconwhite: Icons.ios_share_rounded,
+                    ),
                     SizedBox(width: 10),
                     Buttoncartscreenwidget(
-                        title: "رمز دوم پویا",
-                        imgpath: "assets/img/Password.png"),
+                      title: "رمز دوم پویا",
+                      iconwhite: Icons.vpn_key_rounded,
+                    ),
                   ],
                 ),
                 SizedBox(height: 25),
