@@ -58,7 +58,7 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
             ),
             builder: (context, state) {
               return Container(
-                height: BluDimensions.height(context),
+                height: BluDimensions.height(context) - 60,
                 child: Padding(
                   padding: EdgeInsets.all(20),
                   child: Column(

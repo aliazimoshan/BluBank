@@ -35,11 +35,18 @@ class _TextInputWidgetState extends State<TextInputWidget> {
             fontSize: 14,
             color: BluColor.textgray,
           ),
-          border: OutlineInputBorder(),
-          contentPadding: EdgeInsets.only(right: 10, top: 5, bottom: 5),
-          fillColor: Colors.grey[200],
-          enabledBorder: UnderlineInputBorder(
-            borderSide: new BorderSide(color: Colors.white),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(10.0),
+            ),
+          ),
+          contentPadding: EdgeInsets.only(right: 10, top: 13, bottom: 13),
+          fillColor: Color(0xfff3f4f6),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderSide: BorderSide(
+              color: Color(0xfff3f4f6),
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
