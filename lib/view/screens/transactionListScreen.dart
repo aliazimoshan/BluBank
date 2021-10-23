@@ -12,7 +12,6 @@ class TransactionListScreen extends StatefulWidget {
 
 class TransactionListScreenstate extends State<TransactionListScreen> {
   int _selectedIndex = 0;
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -28,89 +27,100 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
         backgroundColor: Colors.lightBlue.shade400,
         icon: Icon(Icons.search_outlined),
       ),
-      body: SlidingSheet(
-        elevation: 16,
-        cornerRadius: 16,
-        snapSpec: const SnapSpec(
-          snap: true,
-          snappings: [1.0, 0.65],
-          positioning: SnapPositioning.relativeToAvailableSpace,
-        ),
-        body: Column(
-          children: [
-            Container(
-              height: BluDimensions.height(context)-112,
-              width: BluDimensions.width(context),
-              decoration: BoxDecoration(
-                color: Colors.lightBlue[400],
-              ),
-              child: Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      " 135,163  ریال",
-                      style: TextStyle(
+      body: Stack(
+        children: [
+          SlidingSheet(
+            elevation: 16,
+            cornerRadius: 16,
+            snapSpec: const SnapSpec(
+              snap: true,
+              snappings: [1.0, 0.65],
+              positioning: SnapPositioning.relativeToAvailableSpace,
+            ),
+            headerBuilder: (context, state) {
+              return Container(
+                padding: EdgeInsets.all(15),
+                height: 56,
+                width: double.infinity,
+                child: Text(
+                  "تراکنش ها ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
+                ),
+              );
+            },
+            body: Column(
+              children: [
+                Container(
+                  height: BluDimensions.height(context),
+                  width: BluDimensions.width(context),
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue[400],
+                  ),
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          " 135,163  ریال",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.w900),
+                        ),
+                        Text(
+                          "موجودی",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        buttomWidget(
+                          title: "افزایش موجودی",
                           color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900),
+                          backgroundColor:
+                              BluColor.primaryColor.withOpacity(0.5),
+                          icons: Icons.add,
+                        ),
+                        Spacer(),
+                      ],
                     ),
-                    Text(
-                      "موجودی",
-                      style: TextStyle(color: Colors.white),
+                  ),
+                )
+              ],
+            ),
+            builder: (context, state) {
+              return Container(
+                  height: BluDimensions.height(context),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: BluDimensions.height(context),
+                          child: ListView(
+                            children: [],
+                          ),
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    buttomWidget(
-                      title: "افزایش موجودی",
-                      color: Colors.white,
-                      backgroundColor: BluColor.primaryColor.withOpacity(0.5),
-                      icons: Icons.add,
-                    ),
-                    Spacer(),
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
-        builder: (context, state) {
-          return Container(
-              height: BluDimensions.height(context)-100,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "تراکنش ها ",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: BluDimensions.height(context)-212,
-                      width: BluDimensions.width(context),
-                      child: ListView(
-                        children: [],
-                      ),
-                    )
-                  ],
-                ),
-              ));
-        },
+                  ));
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onItemTapped,

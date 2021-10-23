@@ -57,14 +57,29 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
           ),
         ],
       ),
-      body: SlidingSheet(
+      body: Stack(children: [
+        SlidingSheet(
         elevation: 8,
         cornerRadius: 16,
         snapSpec: const SnapSpec(
           snap: true,
-          snappings: [0.4, 0.7, 1.0],
+          snappings: [0.4, 1.0],
           positioning: SnapPositioning.relativeToAvailableSpace,
         ),
+        headerBuilder: (context, state) {
+            return Container(
+              padding: EdgeInsets.all(15),
+              height: 56,
+              width: double.infinity,
+              child: Text(
+                  " آخرین انتقال ها ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
+                ),
+            );
+          },
         body: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -85,85 +100,52 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
         ),
         builder: (context, state) {
           return Container(
-              height: BluDimensions.height(context)-100,
-              child: Padding(
-                padding: EdgeInsets.all(15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      " آخرین انتقال ها ",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height - 260,
-                      child: ListView(
-                        children: [
-                          CardaddTransactionScreenwidget(
-                            name: "احسان شباکی",
-                            cardNum: "6393  ****  ****  4027",
-                            bankImage: 'assets/img/bankimg1.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "کریم اسد الهی",
-                            cardNum: "6362  ****  ****  5173",
-                            bankImage: 'assets/img/bankimg2.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "بهرام صادقی",
-                            cardNum: "6104  ****  ****  7569",
-                            bankImage: 'assets/img/bankimg3.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "والا اطمینان باصری",
-                            cardNum: "6274  ****  ****  2517",
-                            bankImage: 'assets/img/bankimg4.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "احسان شباکی",
-                            cardNum: "6393  ****  ****  4027",
-                            bankImage: 'assets/img/bankimg1.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "کریم اسد الهی",
-                            cardNum: "6362  ****  ****  5173",
-                            bankImage: 'assets/img/bankimg2.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "بهرام صادقی",
-                            cardNum: "6104  ****  ****  7569",
-                            bankImage: 'assets/img/bankimg3.png',
-                          ),
-                          CardaddTransactionScreenwidget(
-                            name: "والا اطمینان باصری",
-                            cardNum: "6274  ****  ****  2517",
-                            bankImage: 'assets/img/bankimg4.png',
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    FloationActionAdd(),
-                    SizedBox(
-                      height: 3,
-                    ),
-                  ],
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 20,
                 ),
-              ));
+               
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      CardaddTransactionScreenwidget(
+                        name: "احسان شباکی",
+                        cardNum: "6393  ****  ****  4027",
+                        bankImage: 'assets/img/bankimg1.png',
+                      ),
+                      CardaddTransactionScreenwidget(
+                        name: "کریم اسد الهی",
+                        cardNum: "6362  ****  ****  5173",
+                        bankImage: 'assets/img/bankimg2.png',
+                      ),
+                      CardaddTransactionScreenwidget(
+                        name: "بهرام صادقی",
+                        cardNum: "6104  ****  ****  7569",
+                        bankImage: 'assets/img/bankimg3.png',
+                      ),
+                      CardaddTransactionScreenwidget(
+                        name: "والا اطمینان باصری",
+                        cardNum: "6274  ****  ****  2517",
+                        bankImage: 'assets/img/bankimg4.png',
+                      ),
+                      FloationActionAdd(),
+                      SizedBox(
+                        height: 20,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
         },
       ),
+      ],)
     );
   }
 }
