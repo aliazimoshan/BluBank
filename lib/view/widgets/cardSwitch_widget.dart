@@ -6,7 +6,7 @@ class CardSwitchScreen extends StatefulWidget {
   const CardSwitchScreen({
     Key? key,
     required this.title,
-    this.subtitle,
+    required this.subtitle,
     this.greyicon,
     this.color,
     this.iconColor,
@@ -30,9 +30,7 @@ class _CardSwitchScreenState extends State<CardSwitchScreen> {
       child: Column(
         children: [
           ListTile(
-            title: Text(
-              widget.title ?? "",
-            ),
+            title: Text(widget.title ?? ""),
             leading: Container(
               decoration: BoxDecoration(
                 color: widget.color ?? BluColor.primaryColor,
