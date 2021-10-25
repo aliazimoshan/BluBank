@@ -2,11 +2,7 @@ import 'dart:ui';
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
 import 'package:blubank/view/widgets/appBar_widget.dart';
-import 'package:blubank/view/widgets/cardSwitch_widget.dart';
-import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
 import 'package:blubank/view/widgets/card_profileScreen_widget.dart';
-import 'package:blubank/view/widgets/contactModal_widget.dart';
-import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -89,11 +85,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBarWidget(text: "تنظیمات"),
       body: Container(
-        padding: EdgeInsets.fromLTRB(25, 25, 25, 0),
+        padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
         color: Colors.white,
         width: BluDimensions.width(context),
         height: BluDimensions.height(context),
         child: ListView(
+          padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
           children: [
             Column(
               children: [

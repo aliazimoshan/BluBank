@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:blubank/constant/colors.dart';
-import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class TextInputWidget extends StatefulWidget {

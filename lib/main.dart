@@ -11,6 +11,7 @@ class BluBank extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'BluBank',
       theme: ThemeData(
         fontFamily: "Vazir",

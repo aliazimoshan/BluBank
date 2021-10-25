@@ -1,14 +1,13 @@
 import 'package:blubank/constant/colors.dart';
-import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class Buttoncartscreenwidget extends StatelessWidget {
   final String title;
-  final String imgpath;
+  final IconData iconwhite;
 
   const Buttoncartscreenwidget({
     required this.title,
-    required this.imgpath,
+    required this.iconwhite,
   });
 
   @override
@@ -17,7 +16,7 @@ class Buttoncartscreenwidget extends StatelessWidget {
       child: InkWell(
         onTap: () {},
         child: Container(
-          padding: EdgeInsets.only(top: 20, bottom: 20),
+          padding: EdgeInsets.only(top: 10, bottom: 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.grey[200],
@@ -28,10 +27,10 @@ class Buttoncartscreenwidget extends StatelessWidget {
                 Container(
                   height: 40,
                   width: 40,
-                  child: Image.asset(
-                    imgpath,
-                    width: 20,
-                    height: 20,
+                  child: Icon(
+                    iconwhite,
+                    color: BluColor.primaryColor,
+                    size: 24,
                   ),
                 ),
                 SizedBox(height: 5),
