@@ -6,14 +6,12 @@ class CardSwitchScreen extends StatefulWidget {
   const CardSwitchScreen({
     Key? key,
     required this.title,
-    this.subtitle,
     this.greyicon,
     this.color,
     this.iconColor,
   }) : super(key: key);
 
   final String? title;
-  final String? subtitle;
   final IconData? greyicon;
   final Color? color;
   final Color? iconColor;
@@ -54,10 +52,6 @@ class _CardSwitchScreenState extends State<CardSwitchScreen> {
                 });
               },
               activeColor: Colors.green,
-            ),
-            subtitle: Text(
-              widget.subtitle ?? "",
-              style: TextStyle(fontSize: 16, color: BluColor.textgray),
             ),
           ),
         ],

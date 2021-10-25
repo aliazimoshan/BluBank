@@ -37,7 +37,7 @@ class _RoyaScreenState extends State<RoyaScreen> {
           CardSwitchScreen(
             title: 'خدمات',
             greyicon: Icons.checklist_rounded,
-            subtitle: 'بهترین خدمات ممکن',
+            // subtitle: 'بهترین خدمات ممکن',
             iconColor: Colors.white,
           ),
           Container(
