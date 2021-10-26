@@ -18,7 +18,11 @@ class AppBarWidget extends AppBar {
           iconTheme: IconThemeData(color: foregroundcolor ?? Colors.black),
           title: Text(
             text,
-            style: TextStyle(color: foregroundcolor ?? Colors.black),
+            style: TextStyle(
+              color: foregroundcolor ?? Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+            ),
           ),
           leading: icon,
           elevation: 0,

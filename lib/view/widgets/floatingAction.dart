@@ -18,14 +18,14 @@ class _FloationActionAddState extends State<FloationActionAdd> {
         // Respond to button press
       },
       icon: Icon(
-        Icons.add,
+        Icons.add_outlined,
         size: 30,
       ),
       label: Text(
         'انتقال جدید',
         style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+          fontSize: 15,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );

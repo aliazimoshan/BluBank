@@ -91,7 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         width: BluDimensions.width(context),
         height: BluDimensions.height(context),
         child: ListView(
-          padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
           children: [
             Column(
               children: [

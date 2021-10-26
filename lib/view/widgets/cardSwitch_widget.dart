@@ -43,7 +43,7 @@ class _CardSwitchWidgetState extends State<CardSwitchWidget> {
                 ? Text(
                     widget.subtitle ?? "",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 13,
                       color: BluColor.textgray,
                     ),
                   )

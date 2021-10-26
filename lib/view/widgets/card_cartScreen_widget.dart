@@ -23,20 +23,19 @@ class Cardcartscreenwidget extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
+              shape: BoxShape.circle,
               color: circlecolor ?? BluColor.primaryColor,
             ),
-            height: 48,
-            width: 48,
-            child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10),
               child: Icon(
                 whiteicon,
                 color: Colors.white,
-                size: 24,
+                size: 22,
               ),
             ),
           ),
-          SizedBox(width: 20),
+          SizedBox(width: 10),
           Expanded(
             child: Container(
               child: Column(
@@ -46,14 +45,14 @@ class Cardcartscreenwidget extends StatelessWidget {
                     child: Text(
                       title,
                       maxLines: 1,
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.right,
                     ),
                   ),
                   Container(
                     child: Text(
                       text,
-                      style: TextStyle(fontSize: 14),
+                      style: TextStyle(fontSize: 13, color: BluColor.textgray),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       softWrap: false,

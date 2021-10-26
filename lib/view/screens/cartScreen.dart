@@ -22,14 +22,14 @@ class _CartScreenState extends State<CartScreen> {
         width: BluDimensions.width(context),
         height: BluDimensions.height(context),
         color: Colors.white,
-        padding: EdgeInsets.only(top: 25),
+        // padding: EdgeInsets.only(top: 25),
         child: Stack(
           children: [
             Column(
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.only(right: 25, left: 25),
+                    padding: EdgeInsets.only(right: 10, left: 10),
                     child: FlipCard(
                       fill: Fill.fillBack,
                       direction: FlipDirection.HORIZONTAL,
@@ -38,10 +38,10 @@ class _CartScreenState extends State<CartScreen> {
                           name: "الهام صادقی",
                           col1: "6219",
                           col2: "8619",
-                          col3: "0286",
-                          col4: "0807",
-                          date: "1403/03",
-                          cvv2: "147"),
+                          col3: "2564",
+                          col4: "0877",
+                          date: "1405/12",
+                          cvv2: "783"),
                     ),
                   ),
                 ),

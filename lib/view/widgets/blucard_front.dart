@@ -12,7 +12,8 @@ class BlucardFront extends StatelessWidget {
         color: BluColor.primaryColor,
         borderRadius: BorderRadius.circular(25),
       ),
-      width: 250,
+      // width: MediaQuery.of(context).size.width * 0.6,
+      height: MediaQuery.of(context).size.height * 0.8,
       child: Column(
         children: [
           Spacer(),

@@ -20,7 +20,10 @@ class CardTransactionList extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            title: Text(title ?? ""),
+            title: Text(
+              title ?? "",
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+            ),
             leading: Container(
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
@@ -31,10 +34,14 @@ class CardTransactionList extends StatelessWidget {
                   child: Icon(
                     greyicon,
                     color: Colors.blueGrey[500],
+                    size: 22,
                   ),
                 )),
-            trailing: Text(fee ?? ""),
-            subtitle: Text(datetime ?? ""),
+            trailing: Text(fee ?? "ریال" + ""),
+            subtitle: Text(
+              datetime ?? "",
+              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
+            ),
           ),
           Divider(),
         ],

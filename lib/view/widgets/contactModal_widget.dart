@@ -119,14 +119,15 @@ class Contactmodalwidget extends StatelessWidget {
             color: background ?? BluColor.primaryColor,
             shape: BoxShape.circle,
           ),
-          width: 25,
-          height: 25,
           child: Center(
-            child: Text(
-              '?',
-              style: TextStyle(
-                color: color ?? Colors.white,
-                fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                '?',
+                style: TextStyle(
+                  color: color ?? Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

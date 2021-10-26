@@ -31,26 +31,28 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
         }
       },
       child: Container(
-        margin: EdgeInsets.all(5),
+        margin: EdgeInsets.only(right: 10, left: 10),
         width: BluDimensions.width(context),
-        height: 100,
+        height: 70,
         child: Row(
           children: [
-             Stack(
+            Stack(
               children: [
                 Container(
-                  width: 50,
                   margin: EdgeInsets.only(left: 5),
                   alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                     shape: BoxShape.circle,
                   ),
-                  child: Center(
-                    child: Icon(
-                      Icons.person_outline,
-                      size: 30,
-                      color: Colors.grey[500],
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Center(
+                      child: Icon(
+                        Icons.person_outline,
+                        size: 22,
+                        color: Colors.grey[500],
+                      ),
                     ),
                   ),
                 ),
@@ -58,18 +60,21 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
                   height: 32,
                   padding: EdgeInsets.only(right: 6, bottom: 6),
                   margin: EdgeInsets.only(
-                    top: 50,
-                    right: 30,
+                    top: 40,
+                    right: 25,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.grey[100],
                     shape: BoxShape.circle,
                   ),
-                  child: Image.asset(bankImage),
+                  child: Image.asset(
+                    bankImage,
+                    width: 20,
+                  ),
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               width: 5,
             ),
             Column(
@@ -78,19 +83,17 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
               children: [
                 Text(
                   name,
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                 ),
                 SizedBox(
                   height: 3,
                 ),
                 Text(
                   cardNum,
-                  style: TextStyle(color: Colors.grey, fontSize: 17),
+                  style: TextStyle(color: Colors.grey, fontSize: 13),
                 ),
               ],
             ),
-           
-           
           ],
         ),
       ),

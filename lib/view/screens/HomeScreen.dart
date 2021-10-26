@@ -48,32 +48,32 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
           ),
           SlidingSheet(
             elevation: 5,
-            cornerRadius: 15,
+            cornerRadius: 10,
             // scrollSpec: const ScrollSpec(overscroll: false),
             snapSpec: const SnapSpec(
               snap: true,
-              snappings: [0.2, 0.7, 0.9],
+              snappings: [0.24, 0.7, 0.9],
               positioning: SnapPositioning.relativeToAvailableSpace,
               initialSnap: 0.7,
             ),
             builder: (context, state) {
               return Container(
-                height: BluDimensions.height(context) - 60,
+                height: BluDimensions.height(context) - 120,
                 child: Padding(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 40,
-                        height: 6,
+                        height: 4,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey,
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20),
+                        margin: EdgeInsets.only(top: 10, bottom: 10),
                         padding: EdgeInsets.only(right: 20),
                         width: BluDimensions.width(context),
                         height: 70,
@@ -117,7 +117,7 @@ class _BluHomeScreenState extends State<BluHomeScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 20,
                       ),
                       Row(
                         children: [

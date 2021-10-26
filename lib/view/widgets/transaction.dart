@@ -33,7 +33,7 @@ class CardTransactionList extends StatelessWidget {
                     color: Colors.blueGrey[500],
                   ),
                 )),
-            trailing: Text(fee ?? ""),
+            trailing: Text(fee ?? '' + ' ' + 'ریال'),
             subtitle: Text(datetime ?? ""),
           ),
           Divider(),
