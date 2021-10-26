@@ -37,12 +37,12 @@ class buttomWidget extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.only(top: 20, bottom: 10),
           width: BluDimensions.width(context),
-          height: 70,
+          height: 50,
           decoration: BoxDecoration(
             color: backgroundColor ?? BluColor.primaryColor,
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -57,8 +57,8 @@ class buttomWidget extends StatelessWidget {
                 title,
                 style: TextStyle(
                   color: color ?? Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],

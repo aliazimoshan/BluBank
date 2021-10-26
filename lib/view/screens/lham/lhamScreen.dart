@@ -3,6 +3,9 @@ import 'package:blubank/view/screens/cartScreen.dart';
 import 'package:blubank/view/screens/profileScreen.dart';
 import 'package:flutter/material.dart';
 
+import '../cartScreen.dart';
+import '../profileScreen.dart';
+
 class LhamScreen extends StatelessWidget {
   const LhamScreen({Key? key}) : super(key: key);
 
