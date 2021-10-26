@@ -1,11 +1,3 @@
-import 'package:blubank/constant/colors.dart';
-import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/view/screens/profileScreen.dart';
-import 'package:blubank/view/widgets/appBar_widget.dart';
-import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
-import 'package:blubank/view/widgets/cartscreen_modal_widget.dart';
-import 'package:blubank/view/widgets/contactModal_widget.dart';
-import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 
 class BlucardBack extends StatelessWidget {

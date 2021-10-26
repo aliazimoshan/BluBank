@@ -19,7 +19,6 @@ class Cardcartscreenwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: BluDimensions.width(context),
-      height: 50,
       child: Row(
         children: [
           Container(
@@ -27,34 +26,43 @@ class Cardcartscreenwidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(50),
               color: circlecolor ?? BluColor.primaryColor,
             ),
-            width: 50,
+            height: 48,
+            width: 48,
             child: Center(
               child: Icon(
                 whiteicon,
                 color: Colors.white,
+                size: 24,
               ),
             ),
           ),
           SizedBox(width: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text(
-                  title,
-                  style: TextStyle(fontSize: 18),
-                  textAlign: TextAlign.right,
-                ),
+          Expanded(
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Text(
+                      title,
+                      maxLines: 1,
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.right,
+                    ),
+                  ),
+                  Container(
+                    child: Text(
+                      text,
+                      style: TextStyle(fontSize: 14),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                    ),
+                  ),
+                ],
               ),
-              Container(
-                child: Text(
-                  text,
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-            ],
+            ),
           ),
-          Spacer(),
           Container(
             child: Center(
               child: Icon(

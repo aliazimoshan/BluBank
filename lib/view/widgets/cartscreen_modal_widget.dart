@@ -1,10 +1,6 @@
 import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/view/screens/cartScreen.dart';
-import 'package:blubank/view/screens/profileScreen.dart';
 import 'package:blubank/view/widgets/button_cartScreen_widget.dart';
 import 'package:blubank/view/widgets/card_cartScreen_widget.dart';
-import 'package:blubank/view/widgets/contactModal_widget.dart';
-import 'package:blubank/view/widgets/rectangleCard_homeScreen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 
@@ -47,12 +43,14 @@ class Cartscreenmodalwidget extends StatelessWidget {
                 Row(
                   children: [
                     Buttoncartscreenwidget(
-                        title: "اشتراک گذاری",
-                        imgpath: "assets/img/Upload.png"),
+                      title: "اشتراک گذاری",
+                      iconwhite: Icons.ios_share_rounded,
+                    ),
                     SizedBox(width: 10),
                     Buttoncartscreenwidget(
-                        title: "رمز دوم پویا",
-                        imgpath: "assets/img/Password.png"),
+                      title: "رمز دوم پویا",
+                      iconwhite: Icons.vpn_key_rounded,
+                    ),
                   ],
                 ),
                 SizedBox(height: 25),

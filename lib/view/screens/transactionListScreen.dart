@@ -1,4 +1,5 @@
 import 'package:blubank/constant/dimensions.dart';
+import 'package:blubank/view/screens/transaction.dart';
 import 'package:blubank/view/widgets/appBar_widget.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 import 'package:blubank/constant/colors.dart';
@@ -51,73 +52,107 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
                 ),
               );
             },
-            body: Column(
-              children: [
-                Container(
-                  height: BluDimensions.height(context),
-                  width: BluDimensions.width(context),
-                  decoration: BoxDecoration(
-                    color: Colors.lightBlue[400],
-                  ),
-                  child: Center(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          " 135,163  ریال",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w900),
-                        ),
-                        Text(
-                          "موجودی",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        buttomWidget(
-                          title: "افزایش موجودی",
-                          color: Colors.white,
-                          backgroundColor:
-                              BluColor.primaryColor.withOpacity(0.5),
-                          icons: Icons.add,
-                        ),
-                        Spacer(),
-                      ],
+            body: Container(
+              height: BluDimensions.height(context),
+              width: BluDimensions.width(context),
+              decoration: BoxDecoration(
+                color: Colors.lightBlue[400],
+              ),
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 15,
                     ),
-                  ),
-                )
-              ],
+                    Text(
+                      " 135,163  ریال",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900),
+                    ),
+                    Text(
+                      "موجودی",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    buttomWidget(
+                      title: "افزایش موجودی",
+                      color: Colors.white,
+                      backgroundColor: BluColor.primaryColor.withOpacity(0.5),
+                      icons: Icons.add,
+                    ),
+                    Spacer(),
+                  ],
+                ),
+              ),
             ),
             builder: (context, state) {
               return Container(
-                  height: BluDimensions.height(context),
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          height: BluDimensions.height(context),
-                          child: ListView(
-                            children: [],
-                          ),
-                        )
-                      ],
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
                     ),
-                  ));
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                    CardTransactionList(
+                      datetime: '1400/8/3',
+                      fee: '10000',
+                      title: 'خرید اینترنتی',
+                      greyicon: Icons.shop,
+                    ),
+                  ],
+                ),
+              );
             },
           ),
         ],

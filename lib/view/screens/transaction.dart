@@ -1,5 +1,3 @@
-import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class CardTransactionList extends StatelessWidget {

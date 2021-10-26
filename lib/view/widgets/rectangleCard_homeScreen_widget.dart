@@ -1,5 +1,3 @@
-import 'package:blubank/constant/colors.dart';
-import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class Rectanglecardhomescreenwidget extends StatelessWidget {
