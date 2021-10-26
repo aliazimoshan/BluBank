@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends AppBar {
   final String text;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final Icon? icon;
   final Color? foregroundcolor;
   AppBarWidget({
@@ -23,7 +23,10 @@ class AppBarWidget extends AppBar {
           leading: icon,
           elevation: 0,
           actions: <Widget>[
-            Contactmodalwidget(),
+            Contactmodalwidget(
+              color: backgroundColor,
+              background: foregroundcolor,
+            ),
           ],
         );
 }

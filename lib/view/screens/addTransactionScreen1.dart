@@ -10,52 +10,14 @@ class AddTransactionScreen extends StatefulWidget {
 }
 
 class AddTransactionScreenstate extends State<AddTransactionScreen> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarWidget(
           text: " انتقال ",
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: _onItemTapped,
-          currentIndex: _selectedIndex,
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/img/Time-Circle.png")),
-              label: "",
-              tooltip: "transaction",
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/img/Swap.png")),
-              label: "",
-              tooltip: "add transaction",
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/img/Home.png")),
-              label: "",
-              tooltip: "home",
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/img/Wallet.png")),
-              label: "",
-              tooltip: "wallet",
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/img/Profile.png")),
-              tooltip: "profile",
-              label: "",
-            ),
-          ],
-        ),
+        floatingActionButton: FloationActionAdd(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         body: Stack(
           children: [
             SlidingSheet(
@@ -104,40 +66,44 @@ class AddTransactionScreenstate extends State<AddTransactionScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
                         height: 10,
                       ),
-                      Container(
-                        child: Column(
-                          children: [
-                            CardaddTransactionScreenwidget(
-                              name: "احسان شباکی",
-                              cardNum: "6393  ****  ****  4027",
-                              bankImage: 'assets/img/bankimg1.png',
-                            ),
-                            CardaddTransactionScreenwidget(
-                              name: "کریم اسد الهی",
-                              cardNum: "6362  ****  ****  5173",
-                              bankImage: 'assets/img/bankimg2.png',
-                            ),
-                            CardaddTransactionScreenwidget(
-                              name: "بهرام صادقی",
-                              cardNum: "6104  ****  ****  7569",
-                              bankImage: 'assets/img/bankimg3.png',
-                            ),
-                            CardaddTransactionScreenwidget(
-                              name: "والا اطمینان باصری",
-                              cardNum: "6274  ****  ****  2517",
-                              bankImage: 'assets/img/bankimg4.png',
-                            ),
-                            FloationActionAdd(),
-                            SizedBox(
-                              height: 20,
-                            )
-                          ],
-                        ),
+                      Column(
+                        children: [
+                          CardaddTransactionScreenwidget(
+                            name: "احسان شباکی",
+                            cardNum: "6393  ****  ****  4027",
+                            bankImage: 'assets/img/bankimg1.png',
+                          ),
+                          CardaddTransactionScreenwidget(
+                            name: "کریم اسد الهی",
+                            cardNum: "6362  ****  ****  5173",
+                            bankImage: 'assets/img/bankimg2.png',
+                          ),
+                          CardaddTransactionScreenwidget(
+                            name: "بهرام صادقی",
+                            cardNum: "6104  ****  ****  7569",
+                            bankImage: 'assets/img/bankimg3.png',
+                          ),
+                          CardaddTransactionScreenwidget(
+                            name: "والا اطمینان باصری",
+                            cardNum: "6274  ****  ****  2517",
+                            bankImage: 'assets/img/bankimg4.png',
+                          ),
+                          CardaddTransactionScreenwidget(
+                            name: "والا اطمینان باصری",
+                            cardNum: "6274  ****  ****  2517",
+                            bankImage: 'assets/img/bankimg4.png',
+                          ),
+                          CardaddTransactionScreenwidget(
+                            name: "والا اطمینان باصری",
+                            cardNum: "6274  ****  ****  2517",
+                            bankImage: 'assets/img/bankimg4.png',
+                          ),
+                          SizedBox(
+                            height: 20,
+                          )
+                        ],
                       ),
                     ],
                   ),

@@ -1,6 +1,11 @@
+import 'package:blubank/view/screens/HomeScreen.dart';
+import 'package:blubank/view/screens/addTransactionScreen1.dart';
 import 'package:blubank/view/screens/asal/asalScreen.dart';
+import 'package:blubank/view/screens/cartScreen.dart';
 import 'package:blubank/view/screens/lham/lhamScreen.dart';
+import 'package:blubank/view/screens/profileScreen.dart';
 import 'package:blubank/view/screens/roya/royaScreen.dart';
+import 'package:blubank/view/screens/transactionListScreen.dart';
 import 'package:blubank/view/widgets/cardTest_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -20,47 +25,11 @@ class _MainScreenState extends State<MainScreen> {
 
   //Template Screens
   List<Widget> _widgetOptions = <Widget>[
-    Column(
-      children: [
-        CardTestWidget(
-          title: "Roya Screen",
-          route: RoyaScreen(),
-          textColor: Colors.purple,
-          backgroundColor: Colors.purple[50],
-          shadowColor: Colors.purple[100],
-        ),
-        CardTestWidget(
-          title: "Asal Screen",
-          route: AsalScreen(),
-        ),
-        CardTestWidget(
-          title: "Lham Screen",
-          route: LhamScreen(),
-          textColor: Colors.yellow[800],
-          backgroundColor: Colors.yellow[100],
-          shadowColor: Colors.yellow[200],
-        ),
-        CardTestWidget(
-          title: "Ali Screen",
-        ),
-      ],
-    ),
-    Text(
-      'Index 1: Add Transaction',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Cart',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Profile',
-      style: optionStyle,
-    ),
+    TransactionListScreen(),
+    AddTransactionScreen(),
+    BluHomeScreen(),
+    CartScreen(),
+    ProfileScreen(),
   ];
 
 //onTab action for bottomNavigationBar

@@ -1,4 +1,6 @@
 import 'package:blubank/constant/colors.dart';
+import 'package:blubank/constant/dimensions.dart';
+import 'package:blubank/view/screens/profileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +28,8 @@ class _CardSwitchScreenState extends State<CardSwitchScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
       child: ListTile(
+        contentPadding: EdgeInsets.zero,
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,21 +38,26 @@ class _CardSwitchScreenState extends State<CardSwitchScreen> {
             widget.subtitle != null
                 ? Text(
                     widget.subtitle ?? "",
-                    style: TextStyle(fontSize: 16, color: BluColor.textgray),
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: BluColor.textgray,
+                    ),
                   )
                 : Container()
           ],
         ),
         leading: Container(
           decoration: BoxDecoration(
-            color: widget.color ?? BluColor.primaryColor,
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(48),
+            color: BluColor.primaryColor,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(10),
+          height: 48,
+          width: 48,
+          child: Center(
             child: Icon(
               widget.greyicon,
-              color: widget.iconColor ?? Colors.blueGrey[500],
+              color: Colors.white,
+              size: 24,
             ),
           ),
         ),

@@ -12,13 +12,6 @@ class TransactionListScreen extends StatefulWidget {
 }
 
 class TransactionListScreenstate extends State<TransactionListScreen> {
-  int _selectedIndex = 0;
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,9 +62,10 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
                     Text(
                       " 135,163  ریال",
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900),
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                      ),
                     ),
                     Text(
                       "موجودی",
@@ -154,38 +148,6 @@ class TransactionListScreenstate extends State<TransactionListScreen> {
                 ),
               );
             },
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: _onItemTapped,
-        currentIndex: _selectedIndex,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/img/Time-Circle.png")),
-            label: "",
-            tooltip: "transaction",
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/img/Swap.png")),
-            label: "",
-            tooltip: "add transaction",
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/img/Home.png")),
-            label: "",
-            tooltip: "home",
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/img/Wallet.png")),
-            label: "",
-            tooltip: "wallet",
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/img/Profile.png")),
-            tooltip: "profile",
-            label: "",
           ),
         ],
       ),

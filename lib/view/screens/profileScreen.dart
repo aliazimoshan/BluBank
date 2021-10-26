@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
 import 'package:blubank/view/widgets/appBar_widget.dart';
+import 'package:blubank/view/widgets/cardSwitch_widget.dart';
 import 'package:blubank/view/widgets/card_profileScreen_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -95,7 +96,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Column(
               children: [
                 //--------------- profile ---------------\\
-
                 Container(
                   alignment: Alignment.topCenter,
                   width: BluDimensions.width(context),
@@ -241,27 +241,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 header(context, title: "اطلاعات"),
                 SizedBox(height: 20),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.account_balance_rounded,
-                    title: "حساب بانکی"),
+                  whiteicon: Icons.account_balance_rounded,
+                  title: "حساب بانکی",
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.sim_card_rounded,
-                    title: "تغییر شماره تلفن همراه"),
+                  whiteicon: Icons.sim_card_rounded,
+                  title: "تغییر شماره تلفن همراه",
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.place_rounded, title: "تغییر آدرس سکونت"),
+                  whiteicon: Icons.place_rounded,
+                  title: "تغییر آدرس سکونت",
+                ),
                 SizedBox(height: 20),
 
                 //--------------- security ---------------\\
                 header(context, title: "امنیت"),
                 SizedBox(height: 20),
-                // CardSwitchScreen(),
-                Cartprofilescreenwidget(
-                    whiteicon: Icons.vpn_key_rounded, title: "تغییر رمز عبور"),
+                CardSwitchScreen(
+                  title: "ورود با تشخیص چهره",
+                  greyicon: Icons.face_unlock_outlined,
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.smartphone_outlined,
-                    title: "دستگاه های من"),
+                  whiteicon: Icons.vpn_key_rounded,
+                  title: "تغییر رمز عبور",
+                ),
+                SizedBox(height: 10),
+                Cartprofilescreenwidget(
+                  whiteicon: Icons.smartphone_outlined,
+                  title: "دستگاه های من",
+                ),
                 SizedBox(height: 20),
 
                 //--------------- notification ---------------\\
@@ -269,27 +280,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                 SizedBox(height: 20),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.notifications_rounded,
-                    title: "تنظیمات اطلاع رسانی"),
+                  whiteicon: Icons.notifications_rounded,
+                  title: "تنظیمات اطلاع رسانی",
+                ),
                 SizedBox(height: 20),
 
                 //--------------- public ---------------\\
                 header(context, title: "عمومی"),
                 SizedBox(height: 20),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.people_rounded, title: "دعوت از دوستان"),
+                  whiteicon: Icons.people_rounded,
+                  title: "دعوت از دوستان",
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.description_rounded,
-                    title: "قوانین و شرایط"),
+                  whiteicon: Icons.description_rounded,
+                  title: "قوانین و شرایط",
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.insert_emoticon_rounded,
-                    title: "درباره ما"),
+                  whiteicon: Icons.insert_emoticon_rounded,
+                  title: "درباره ما",
+                ),
                 SizedBox(height: 10),
                 Cartprofilescreenwidget(
-                    whiteicon: Icons.exit_to_app_rounded,
-                    title: "خروج از حساب کاربری"),
+                  whiteicon: Icons.exit_to_app_rounded,
+                  title: "خروج از حساب کاربری",
+                ),
                 SizedBox(height: 20),
 
                 //--------------- version ---------------\\

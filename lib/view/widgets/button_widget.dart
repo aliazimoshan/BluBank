@@ -37,7 +37,7 @@ class buttomWidget extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Container(
-          margin: EdgeInsets.only(top: 20, bottom: 10),
+          margin: EdgeInsets.only(top: 20, bottom: 10, right: 20, left: 20),
           width: BluDimensions.width(context),
           height: 50,
           decoration: BoxDecoration(

@@ -3,7 +3,10 @@ import 'package:blubank/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class Contactmodalwidget extends StatelessWidget {
-  const Contactmodalwidget({Key? key}) : super(key: key);
+  final Color? color;
+  final Color? background;
+
+  Contactmodalwidget({this.color, this.background});
 
   blulist({String title = "", IconData? greyicon}) {
     return Container(
@@ -113,7 +116,7 @@ class Contactmodalwidget extends StatelessWidget {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: BluColor.primaryColor,
+            color: background ?? BluColor.primaryColor,
             shape: BoxShape.circle,
           ),
           width: 25,
@@ -122,7 +125,7 @@ class Contactmodalwidget extends StatelessWidget {
             child: Text(
               '?',
               style: TextStyle(
-                color: Colors.white,
+                color: color ?? Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
