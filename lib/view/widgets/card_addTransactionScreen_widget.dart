@@ -31,7 +31,7 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
         }
       },
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.all(5),
         width: BluDimensions.width(context),
         height: 100,
         child: Row(
@@ -39,7 +39,7 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
              Stack(
               children: [
                 Container(
-                  width: 55,
+                  width: 50,
                   margin: EdgeInsets.only(left: 5),
                   alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
@@ -70,7 +70,7 @@ class CardaddTransactionScreenwidget extends StatelessWidget {
               ],
             ),
              SizedBox(
-              width: 15,
+              width: 5,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
