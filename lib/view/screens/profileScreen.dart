@@ -18,7 +18,7 @@ header(BuildContext context, {String title = ''}) {
     width: BluDimensions.width(context),
     child: Text(
       title,
-      style: TextStyle(fontSize: 24),
+      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
     ),
   );
 }

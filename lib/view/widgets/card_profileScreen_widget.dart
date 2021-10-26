@@ -20,24 +20,23 @@ class Cartprofilescreenwidget extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(48),
+              shape: BoxShape.circle,
               color: BluColor.primaryColor,
             ),
-            height: 48,
-            width: 48,
-            child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10),
               child: Icon(
                 whiteicon,
                 color: Colors.white,
-                size: 24,
+                size: 22,
               ),
             ),
           ),
-          SizedBox(width: 20),
+          SizedBox(width: 10),
           Container(
             child: Text(
               title,
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
             ),
           ),
           Spacer(),

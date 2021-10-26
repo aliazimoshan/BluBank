@@ -32,7 +32,13 @@ class _CardSwitchWidgetState extends State<CardSwitchWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(widget.title ?? ""),
+            Text(
+              widget.title ?? "",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
             widget.subtitle != null
                 ? Text(
                     widget.subtitle ?? "",
@@ -46,16 +52,15 @@ class _CardSwitchWidgetState extends State<CardSwitchWidget> {
         ),
         leading: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(48),
+            shape: BoxShape.circle,
             color: BluColor.primaryColor,
           ),
-          height: 48,
-          width: 48,
-          child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10),
             child: Icon(
               widget.greyicon,
               color: Colors.white,
-              size: 24,
+              size: 22,
             ),
           ),
         ),
