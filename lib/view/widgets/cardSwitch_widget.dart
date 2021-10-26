@@ -1,11 +1,9 @@
 import 'package:blubank/constant/colors.dart';
-import 'package:blubank/constant/dimensions.dart';
-import 'package:blubank/view/screens/profileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CardSwitchScreen extends StatefulWidget {
-  const CardSwitchScreen({
+class CardSwitchWidget extends StatefulWidget {
+  const CardSwitchWidget({
     Key? key,
     required this.title,
     this.subtitle,
@@ -20,10 +18,10 @@ class CardSwitchScreen extends StatefulWidget {
   final Color? color;
   final Color? iconColor;
   @override
-  _CardSwitchScreenState createState() => _CardSwitchScreenState();
+  _CardSwitchWidgetState createState() => _CardSwitchWidgetState();
 }
 
-class _CardSwitchScreenState extends State<CardSwitchScreen> {
+class _CardSwitchWidgetState extends State<CardSwitchWidget> {
   bool isSwitched = false;
   @override
   Widget build(BuildContext context) {

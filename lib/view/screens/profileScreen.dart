@@ -259,7 +259,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 //--------------- security ---------------\\
                 header(context, title: "امنیت"),
                 SizedBox(height: 20),
-                CardSwitchScreen(
+                CardSwitchWidget(
                   title: "ورود با تشخیص چهره",
                   greyicon: Icons.face_unlock_outlined,
                 ),
