@@ -1,5 +1,6 @@
 import 'package:blubank/constant/colors.dart';
 import 'package:blubank/constant/dimensions.dart';
+import 'package:blubank/view/screens/mainScreen.dart';
 import 'package:blubank/view/widgets/button_widget.dart';
 import 'package:blubank/view/widgets/textInput_widget.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class BluLogin extends StatelessWidget {
               ),
               Center(
                 child: Text(
-                  'Users name',
+                  'AliAzimoshan',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -41,6 +42,7 @@ class BluLogin extends StatelessWidget {
                 color: Colors.white,
                 icons: Icons.face_unlock_outlined,
                 title: 'ورود با تشخیص چهره',
+                route: MainScreen(),
               ),
               SizedBox(
                 height: BluDimensions.height(context) * 0.2,
@@ -50,8 +52,9 @@ class BluLogin extends StatelessWidget {
                   child: Text(
                     'خروج از حساب کاربری',
                     style: TextStyle(
-                        color: BluColor.primaryColor,
-                        fontWeight: FontWeight.w500),
+                      color: BluColor.primaryColor,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
                 onTap: () {

@@ -12,6 +12,7 @@ class AppBarWidget extends AppBar {
     this.icon,
     this.foregroundcolor,
   }) : super(
+          automaticallyImplyLeading: false,
           foregroundColor: foregroundcolor,
           centerTitle: true,
           backgroundColor: backgroundColor,

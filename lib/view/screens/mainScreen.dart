@@ -1,12 +1,8 @@
 import 'package:blubank/view/screens/HomeScreen.dart';
 import 'package:blubank/view/screens/addTransactionScreen1.dart';
-import 'package:blubank/view/screens/asal/asalScreen.dart';
 import 'package:blubank/view/screens/cartScreen.dart';
-import 'package:blubank/view/screens/lham/lhamScreen.dart';
 import 'package:blubank/view/screens/profileScreen.dart';
-import 'package:blubank/view/screens/roya/royaScreen.dart';
 import 'package:blubank/view/screens/transactionListScreen.dart';
-import 'package:blubank/view/widgets/cardTest_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -17,13 +13,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
-  //TextStyle for titles
-  static const TextStyle optionStyle = TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.bold,
-  );
-
-  //Template Screens
   List<Widget> _widgetOptions = <Widget>[
     TransactionListScreen(),
     AddTransactionScreen(),
